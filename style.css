@@ -90,6 +90,12 @@ main {
     padding: 50px;
 }
 
+@media (prefers-color-scheme: dark) {
+  main {
+    background-color: #121212;
+  }
+}
+
 section {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -114,30 +120,4 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-}
-
-/* Dark Mode Styles */
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #eee;
-  }
-  
-  header {
-    background-color: #1E1E1E;
-  }
-  
-  nav a {
-    color: #ddd;
-  }
-  
-  section {
-    background-color: #212121;
-    color: #eee;
-  }
-  
-  footer {
-    background-color: #1E1E1E;
-  }
 }
