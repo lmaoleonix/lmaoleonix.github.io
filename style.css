@@ -115,3 +115,29 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Dark Mode Styles */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  header {
+    background-color: #1E1E1E;
+  }
+  
+  nav a {
+    color: #ddd;
+  }
+  
+  section {
+    background-color: #212121;
+    color: #eee;
+  }
+  
+  footer {
+    background-color: #1E1E1E;
+  }
+}
