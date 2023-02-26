@@ -94,8 +94,18 @@ header {
   padding: 20px;
 }
 
+@keyframes rainbow {
+  0% { color: #FF0000; }
+  17% { color: #FF7F00; }
+  34% { color: #FFFF00; }
+  51% { color: #00FF00; }
+  68% { color: #0000FF; }
+  85% { color: #4B0082; }
+  100% { color: #8F00FF; }
+}
+
 .header-title {
-  margin: 0;
+  animation: rainbow 10s ease infinite;
 }
 
 nav ul li {
