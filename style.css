@@ -105,6 +105,7 @@ header {
 }
 
 .header-title {
+  margin: 0;
   animation: rainbow 10s ease infinite;
 }
 
