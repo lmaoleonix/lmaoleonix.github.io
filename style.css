@@ -84,6 +84,8 @@ ul {
 
 /* Header Styles */
 header {
+  position: fixed;
+  width: 100%;
   background-color: var(--primary-color);
   color: var(--text-color);
   display: flex;
@@ -101,8 +103,13 @@ nav ul li {
   margin-left: 20px;
 }
 
+.container {
+  padding-top: 70px;
+}
+
 /* Main Styles */
 main {
+  padding-top: 70px;
   background-color: var(--secondary-color);
   padding: 50px;
 }
