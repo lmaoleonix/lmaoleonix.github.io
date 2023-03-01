@@ -130,6 +130,25 @@ html {
   transition: scroll-behavior 0.5s ease-in-out;
 }
 
+#tic-tac-toe-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.tic-tac-toe-cell {
+  border: 2px solid black;
+  font-size: 48px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tic-tac-toe-cell:hover {
+  background-color: lightgray;
+}
+
 
 section {
   background-color: var(--background-color);
