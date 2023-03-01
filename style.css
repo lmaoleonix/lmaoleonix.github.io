@@ -130,25 +130,113 @@ html {
   transition: scroll-behavior 0.5s ease-in-out;
 }
 
-#tic-tac-toe-board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  margin-top: 10px;
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: #444;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.tic-tac-toe-cell {
-  border: 2px solid black;
-  font-size: 48px;
-  text-align: center;
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
-.tic-tac-toe-cell:hover {
-  background-color: lightgray;
+.cell:hover {
+  background-color: #ddd;
 }
 
+#tictactoe-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#tictactoe-panel.show {
+  display: block;
+}
+
+#tictactoe-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tic-tac-toe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.tic-tac-toe .square {
+  width: 96px;
+  height: 96px;
+  background-color: #8bc34a;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.tic-tac-toe .square:hover {
+  transform: scale(1.1);
+}
+
+.tic-tac-toe .square.disabled {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.tic-tac-toe .square.disabled:hover {
+  transform: none;
+  cursor: not-allowed;
+}
+
+.tic-tac-toe .square.x:before {
+  content: 'X';
+}
+
+.tic-tac-toe .square.o:before {
+  content: 'O';
+}
 
 section {
   background-color: var(--background-color);
