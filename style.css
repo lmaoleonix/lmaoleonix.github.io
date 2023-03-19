@@ -133,124 +133,53 @@ html {
 .game-board {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
   display: flex;
+  flex-direction: row;
 }
 
 .cell {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
   width: 100px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
+  border: 2px solid black;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.panel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #eee;
-  padding: 10px;
+.cell:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-#tictactoe-panel {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
-  height: 400px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-  display: none;
-  z-index: 9999;
+.cell:not(:last-child) {
+  margin-right: 10px;
 }
 
-#tictactoe-panel.show {
-  display: block;
+.game--status {
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
-#tictactoe-panel .game-board {
-  margin: 20px;
-}
-
-#tictactoe-panel .cell:not(:last-child) {
-  border-right: none;
-  border-bottom: none;
-}
-
-#tictactoe-panel .cell:nth-child(3n) {
-  border-right: none;
-}
-
-#tictactoe-panel .cell:nth-last-child(-n+3) {
-  border-bottom: none;
-}
-
-.tic-tac-toe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-}
-
-#tictactoe-panel.show {
-  display: block;
-}
-
-#tictactoe-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+.game--restart {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.tic-tac-toe .square {
-  width: 96px;
-  height: 96px;
-  background-color: #8bc34a;
-  margin: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: all 0.2s ease-in-out;
-}
-
-.tic-tac-toe .square:hover {
-  transform: scale(1.1);
-}
-
-.tic-tac-toe .square.disabled {
-  background-color: #ccc;
-  color: #fff;
-}
-
-.tic-tac-toe .square.disabled:hover {
-  transform: none;
-  cursor: not-allowed;
-}
-
-.tic-tac-toe .square.x:before {
-  content: 'X';
-}
-
-.tic-tac-toe .square.o:before {
-  content: 'O';
+.game--restart:hover {
+  background-color: #0062cc;
 }
 
 section {
