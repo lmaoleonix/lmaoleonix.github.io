@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #7dc639;
+  --secondary-color: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.App-header h1 {
+  font-size: 1.5rem;
+}
+
+.App-header nav ul {
+  display: flex;
+}
+
+.App-header nav ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.App-header nav ul li button {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.App-header nav ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.App-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.App-section {
+  background-color: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  animation: glossy 3s ease-in-out;
+}
+
+.App-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.App-section ul {
+  list-style: none;
+}
+
+.App-section ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.App-section ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@keyframes glossy {
+  0% {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.05),
+                0 1px 0 rgba(0,0,0,0.05);
+  }
+  50% {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.2));
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2),
+                inset 0 1px 0 rgba(0,0,0,0.1),
+                0 -1px 0 rgba(0,0,0,0.05);
+  }
+  100% {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.05),
+                0 1px 0 rgba(0,0,0,0.05);
+  }
+}
+
+.glossy {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2), 
+              0 0 20px rgba(0,0,0,0.2), 
+              0 0 40px rgba(0,0,0,0.2), 
+              0 0 80px rgba(0,0,0,0.2), 
+              0 0 160px rgba(0,0,0,0.2);
+}
+
+.glossy:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+              inset 0 -1px 0 rgba(0,0,0,0.05),
+              0 1px 0 rgba(0,0,0,0.05);
+  animation: glossy 3s forwards;
+  border-radius: 10px;
+}
